@@ -65,7 +65,3 @@ def gpu_minimize_dfa(states, alphabet, start_state, final_states, transitions):
                     worklist.append(new_id if Y1.sum() < Y2.sum() else q)
                 else:
                     worklist.append(new_id if Y1.sum() < Y2.sum() else q)
-
-    # NOTE: We don’t rebuild the minimal DFA here (benchmark only measures time).
-    # If you need the minimized DFA back, you’d reconstruct it just like in Hopcroft
-    # using the final `part` array to group states into equivalence classes.
